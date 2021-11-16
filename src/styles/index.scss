@@ -2,5 +2,53 @@
 @import 'globals';
 
 body {
-  background-color: $favColor !important;
+  background-color: white !important;
+}
+
+.navbar {
+  background-color: #a5aebd88;
+  color: black;
+  font-family: 'Bauer';
+}
+
+.navlink {
+  color: black;
+}
+
+.nav-item {
+  margin-left: 1em;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-container {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 12px;
+  width: 70%;
+  height: 25em;
+  overflow: hidden;
+  margin-top: 3em;
+}
+
+.bio-image img {
+  border: 1px transparent;
+  object-fit: contain;
+  margin-right: 1em;
+  max-height: 100%;
+  border-right: 1px solid black;
+}
+
+.bio-body {
+  word-wrap: break-word;
+  margin: 1em;
+  text-overflow: inherit;
+}
+
+.bio-body p {
+  font-size: .9em;
 }
