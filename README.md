@@ -1,5 +1,7 @@
 ## Bio Site
 
+### Your completed personal site will be reviewed by your instructor before you start your capstone.
+
 ## Requirements
 - You should go through AT LEAST 4 projects (individual or group) and deployed them.
 - Each project should have a clickable link that goes to more details that includes a link to the Github Repo and Deployed App.
@@ -22,7 +24,6 @@
 
 ### Stretch
 - CRUD on multiple content types on the site (Trust me, you will be thankful that you did!)
-- Your completed personal site will be reviewed by your instructor before you start your capstone.
 
 ## Pages for Personal Bio Site
 ### About
