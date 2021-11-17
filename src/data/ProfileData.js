@@ -29,7 +29,6 @@ const getContactData = async () => {
 
 const getTechData = async () => {
   const techCall = await axios.get(`${dbUrl}/tech.json`).then((response) => Object.values(response.data));
-  console.log(techCall);
   return techCall;
 };
 

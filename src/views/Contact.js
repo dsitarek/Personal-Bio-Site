@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ContactCard from '../components/ContactCard';
+import { ContactCard } from '../components/index';
 import { getContactData } from '../data/ProfileData';
 
 export default function Contact() {
