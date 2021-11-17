@@ -59,3 +59,18 @@ body {
   font-size: 3em;
   color: goldenrod;
 }
+
+.tech-container {
+  display: flex;
+  margin: 2em 1em 0 1em;
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.tech-image {
+  max-width: 12em;
+}

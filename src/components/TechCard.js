@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 export default function TechCard({ tech }) {
   return (
-    <div>
+    <div className="tech-card">
+      <img src={tech.imageURL} className="tech-image" alt={tech.name} />
       {tech.name}
     </div>
   );
@@ -12,5 +13,6 @@ export default function TechCard({ tech }) {
 TechCard.propTypes = {
   tech: PropTypes.shape({
     name: PropTypes.string,
+    imageURL: PropTypes.string,
   }).isRequired,
 };
