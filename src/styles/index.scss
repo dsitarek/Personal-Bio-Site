@@ -6,13 +6,15 @@ body {
 }
 
 .navbar {
-  background-color: #a5aebd88;
-  color: black;
+  background-color: #49494988;
   font-family: 'Bauer';
+  padding: 0;
+  font-size: 1.5em;
+  font-family: "ShipporiAntique";
 }
 
 .navlink {
-  color: black;
+  color: goldenrod;
 }
 
 .nav-item {
@@ -51,4 +53,9 @@ body {
 
 .bio-body p {
   font-size: .9em;
+}
+
+.contact-icon {
+  font-size: 3em;
+  color: goldenrod;
 }
