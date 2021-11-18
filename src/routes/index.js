@@ -1,7 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { About, Contact, Tech } from '../views/index';
+import {
+  About, Contact, Tech, Projects,
+} from '../views/index';
 
 export default function Routes({ isAdmin }) {
   console.warn(isAdmin);
@@ -11,9 +13,9 @@ export default function Routes({ isAdmin }) {
         <Route exact path="/">
           <About />
         </Route>
-        {/* <Route exact path="/projects">
+        <Route exact path="/projects">
           <Projects />
-        </Route> */}
+        </Route>
         <Route exact path="/tech">
           <Tech />
         </Route>
