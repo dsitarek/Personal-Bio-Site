@@ -32,4 +32,29 @@ const getTechData = async () => {
   return techCall;
 };
 
-export { getAboutData, getContactData, getTechData };
+const getProjectRepos = async () => {
+  const fbCall = await axios.get(`${dbUrl}/projects.json`).then((response) => Object.values(response.data));
+  return fbCall;
+};
+
+const getProjectData = async (repoName) => {
+  const gitRepoCall = await axios.get(`${gitUrl}/repos/${gitUser}/${repoName}`).then((response) => response.data);
+  const repoLangCall = await axios.get(`${gitUrl}/repos/${gitUser}/${repoName}/languages`).then((response) => response.data);
+  const lastCommit = await axios.get(`${gitUrl}/repos/${gitUser}/${repoName}/commits`).then((response) => new Date(response.data[0].commit.author.date).toLocaleString('en-US', { dateStyle: 'short', timeStyle: 'short' }));
+  let repoLines = 0;
+  (Object.values(repoLangCall)).forEach((langLines) => { repoLines += langLines; });
+  const repoLangArr = Object.entries(repoLangCall);
+  repoLangArr.forEach((lang) => lang.push(Math.round((lang[1] / repoLines) * 1000) / 10));
+  // repoLangArr is an array formatted as such: [language(str), total lines of language(num), percentage of language out of total lines(num)]
+  const repoDataObj = {
+    gitHubURL: gitRepoCall.html_url,
+    lastCommit,
+    languages: repoLangArr,
+  };
+  console.log(repoDataObj);
+  return repoDataObj;
+};
+
+export {
+  getAboutData, getContactData, getTechData, getProjectRepos, getProjectData,
+};
