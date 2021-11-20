@@ -51,7 +51,6 @@ const getProjectData = async (repoName) => {
     lastCommit,
     languages: repoLangArr,
   };
-  console.log(repoDataObj);
   return repoDataObj;
 };
 

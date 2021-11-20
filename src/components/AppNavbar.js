@@ -7,8 +7,10 @@ import {
   Nav,
   NavItem,
   NavLink,
+  Button,
 } from 'reactstrap';
 import PropTypes from 'prop-types';
+import { signInUser, signOutUser } from '../api/auth';
 
 const AppNavbar = ({ isAdmin }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,6 +41,8 @@ const AppNavbar = ({ isAdmin }) => {
                 <NavLink href="/adminTools">Admin Tools</NavLink>
               </NavItem>
             ) : ''}
+            <Button onClick={signInUser}>in</Button>
+            <Button onClick={signOutUser}>out</Button>
           </Nav>
         </Collapse>
       </Navbar>
