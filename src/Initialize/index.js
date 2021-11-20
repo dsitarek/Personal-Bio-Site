@@ -10,7 +10,7 @@ function Initialize() {
   useEffect(async () => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        user.getIdTokenResult().then((idTokenResult) => idTokenResult.claims.admin).then(setIsAdmin);
+        user.getIdTokenResult().then((idTokenResult) => idTokenResult.claims.admin).then((idTokenResult) => setIsAdmin(!!idTokenResult));
       }
     });
   }, []);

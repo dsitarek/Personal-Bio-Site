@@ -73,4 +73,56 @@ body {
 
 .tech-image {
   max-width: 12em;
+  padding: 0.5em;
+}
+
+.admin-page-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  align-items: center;
+}
+
+.admin-forms-container {
+  margin: 1em;
+  align-items: center;
+}
+
+.admin-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  padding: .5em;
+  margin-bottom: 2em;
+}
+
+.admin-form-container form {
+  display: flex;
+  flex-direction: column;
+  margin: .5em;
+}
+
+.admin-project-container, .admin-tech-container {
+  display: flex;
+  border: 1px solid black;
+  margin: 2em;
+  padding: 2em;
+  flex-wrap: wrap;
+}
+
+.project-admin-card form, .tech-admin-card form {
+  display: flex;
+  flex-direction: column;
+  margin: .5em;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: .5em;
+}
+.admin-cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
