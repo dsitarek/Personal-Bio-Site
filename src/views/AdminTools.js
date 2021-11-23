@@ -15,6 +15,8 @@ const initialState = {
   projects: {
     name: '',
     title: '',
+    description: '',
+    imageURL: '',
   },
   tech: {
     name: '',
@@ -93,6 +95,8 @@ export default function AdminTools() {
             Add Project:
             <input type="text" id="name" name="name" placeholder="Enter project GitHub name" value={formInput.projects?.name} onChange={(e) => handleChange(e, 'projects')} />
             <input type="text" id="title" name="title" placeholder="Enter project title" value={formInput.projects?.title} onChange={(e) => handleChange(e, 'projects')} />
+            <input type="text" id="description" name="description" placeholder="Enter project description" value={formInput.projects?.description} onChange={(e) => handleChange(e, 'projects')} />
+            <input type="text" id="imageURL" name="imageURL" placeholder="Enter project image URL" value={formInput.projects?.imageURL} onChange={(e) => handleChange(e, 'projects')} />
             <button type="submit" className="btn btn-primary">Submit</button>
           </form>
         </div>

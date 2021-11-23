@@ -3,22 +3,33 @@
 
 body {
   background-color: white !important;
+  font-family: "ShipporiAntique" !important;
 }
 
 .navbar {
-  background-color: #49494988;
+  background-color: black;
   font-family: 'Bauer';
   padding: 0;
   font-size: 1.5em;
-  font-family: "ShipporiAntique";
+  font-family: "ShipporiAntique" !important;
 }
 
 .navlink {
-  color: goldenrod;
+  color:#cfb062 !important;
+  text-shadow: 0px 0px 1px rgb(104, 78, 13);
+}
+
+.navlink:hover {
+  color: rgb(158, 119, 20) !important;
 }
 
 .nav-item {
   margin-left: 1em;
+}
+
+.nav-logo {
+  width: 7em;
+  margin: -.2em;
 }
 
 .about-container {
@@ -29,20 +40,19 @@ body {
 
 .bio-container {
   display: flex;
-  border: 1px solid black;
-  border-radius: 12px;
   width: 70%;
   height: 25em;
   overflow: hidden;
-  margin-top: 3em;
+  margin-top: 8em;
+  color: rgb(68, 68, 68);
 }
 
 .bio-image img {
   border: 1px transparent;
+  border-radius: 12px;
   object-fit: contain;
   margin-right: 1em;
   max-height: 100%;
-  border-right: 1px solid black;
 }
 
 .bio-body {
@@ -52,28 +62,48 @@ body {
 }
 
 .bio-body p {
-  font-size: .9em;
+  font-size: 1.2em;
+}
+
+.bio-body h3 {
+  color: #cfb062;
+  background-color: black;
+  text-align: center;
+  width: 10em;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5em;
 }
 
 .contact-icon {
   font-size: 3em;
-  color: goldenrod;
+  color: #cfb062;
 }
 
 .tech-container {
   display: flex;
-  margin: 2em 1em 0 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4em 1em 0 1em;
 }
 
 .tech-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  margin: 0 2em 4em 2em;
+  text-align: center;
+  color: #cfb062;
+  text-shadow: 0 0 2px rgb(160, 151, 151);
 }
 
 .tech-image {
-  max-width: 12em;
+  max-height: 12em;
   padding: 0.5em;
+  align-self: center;
 }
 
 .admin-page-container {
@@ -125,4 +155,53 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.project-link {
+  color: black;
+  text-decoration: none;
+  margin-top: -1.5em;
+}
+
+.project-link:hover {
+  color: goldenrod;
+}
+
+.project-github-icon {
+  font-size: 1.5em;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px transparent;
+  border-radius: 6px;
+  background-image: linear-gradient(#cfb06252, rgba(0, 0, 0, 0.329));
+  height: 33em;
+  flex-basis: 22%;
+  margin: .5em;
+  padding: .5em 1em .5em 1em;
+  align-items: center;
+  justify-content: space-evenly;
+  word-wrap: break-word;
+}
+
+.project-card p {
+  text-align: center;
+  
+}
+
+.project-card img {
+  width: 90%;
+  height: 11em;
+}
+
+.footer {
+  margin-top: auto;
 }

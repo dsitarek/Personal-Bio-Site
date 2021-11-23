@@ -10,9 +10,12 @@ import {
   Button,
 } from 'reactstrap';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 import { signInUser, signOutUser } from '../api/auth';
+import dsLogo from '../assets/ds-logo.png';
 
 const AppNavbar = ({ isAdmin }) => {
+  const history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -20,29 +23,29 @@ const AppNavbar = ({ isAdmin }) => {
   return (
     <div>
       <Navbar light expand="md" className="navbar">
-        <NavbarBrand href="/">Daniel Sitarek</NavbarBrand>
+        <NavbarBrand href="/"><img src={dsLogo} className="nav-logo" alt="DS Logo" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="container-fluid" navbar>
             <NavItem>
-              <NavLink href="/">Home</NavLink>
+              <NavLink href="/" className="navlink">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/Projects">Projects</NavLink>
+              <NavLink href="/Projects" className="navlink">Projects</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/tech">Technologies</NavLink>
+              <NavLink href="/tech" className="navlink">Technologies</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/contact">Contact</NavLink>
+              <NavLink href="/contact" className="navlink">Contact</NavLink>
             </NavItem>
             {isAdmin ? (
               <NavItem>
-                <NavLink href="/adminTools">Admin Tools</NavLink>
+                <NavLink href="/adminTools" className="navlink">Admin Tools</NavLink>
               </NavItem>
             ) : ''}
             <Button onClick={signInUser}>in</Button>
-            <Button onClick={signOutUser}>out</Button>
+            <Button onClick={() => signOutUser().then(history.push('/'))}>out</Button>
           </Nav>
         </Collapse>
       </Navbar>

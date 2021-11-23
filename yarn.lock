@@ -5464,6 +5464,11 @@
     "flatted" "^3.1.0"
     "rimraf" "^3.0.2"
 
+"flat-icons@^1.0.0":
+  "integrity" "sha1-kDTAtJng79kH00HbEd+Abl0AZw8="
+  "resolved" "https://registry.npmjs.org/flat-icons/-/flat-icons-1.0.0.tgz"
+  "version" "1.0.0"
+
 "flatted@^3.1.0":
   "integrity" "sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA=="
   "resolved" "https://registry.npmjs.org/flatted/-/flatted-3.1.1.tgz"
