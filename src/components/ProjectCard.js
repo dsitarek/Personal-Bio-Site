@@ -12,10 +12,10 @@ export default function ProjectCard({ repo }) {
 
   return (
     <div className="project-card">
-      <h3>{repo.title}</h3>
-      <img src={repo.image} alt={repo.name} />
+      <a href={projectData.gitHubURL} className="project-link"><span className="project-github-icon">{repo.title}<i className="fab fa-github" /></span></a>
+      <img src={repo.imageURL} alt={repo.name} />
       <p>{repo.description}</p>
-      <ul>
+      <ul className="project-lang-list">
         <li>Last commit on: {projectData.lastCommit}</li>
         <li>Languages: {projectData.languages ? (projectData.languages).map((lang) => <LanguageList key={lang[0]} lang={lang} />) : ''}</li>
       </ul>
@@ -27,7 +27,7 @@ ProjectCard.propTypes = {
   repo: PropTypes.shape({
     name: PropTypes.string,
     title: PropTypes.string,
-    image: PropTypes.string,
+    imageURL: PropTypes.string,
     description: PropTypes.string,
   }).isRequired,
 };
