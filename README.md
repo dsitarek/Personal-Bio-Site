@@ -1,57 +1,23 @@
 ## Bio Site
 
-### Your completed personal site will be reviewed by your instructor before you start your capstone.
+[Deployed Site]()
 
-## Requirements
-- You should go through AT LEAST 4 projects (individual or group) and deployed them.
-- Each project should have a clickable link that goes to more details that includes a link to the Github Repo and Deployed App.
-- You should have real data everywhere throughout your personal site. No lorem.
-- Your site should allow some form of authentication so that you can make changes.
-- Your site should have CRUD on at least one (1) content type:
-- About, Contact, Technologies, or Projects.
+## Description/Features
+This is my personal website/portfolio to display my projects, bio, techstack, and contact information.
 
-### README is completed with:
-- Name of the Project
-- Overview of the project
-- Link to your wireframes/prototype
-- Link to the deployed project
-- Link to your project board (yes...even though it is a part of the repo)
-- Description of the user
-- List of features
-- Screenshots of your project
-- List of contributors and links to their GH profiles
-- Link to Loom video walkthrough of your app (no more than 1 minute long! Make it great)
+- Users can view projects, bio, techstack, and contact information.
+- Admins can edit all data displayed.
 
-### Stretch
-- CRUD on multiple content types on the site (Trust me, you will be thankful that you did!)
+## Layout
+![BioLayout](https://user-images.githubusercontent.com/82732748/143180732-56dfd123-f372-4935-935d-a0d74aceb395.png)
 
-## Pages for Personal Bio Site
-### About
-- Is it easy to find the personal bio?
-- Bonus points for having your own custom domain and redirecting to your deployed site
-- Does the personal bio tell the story:
-- Why do they want to go into development
-- What they love about development
-- What makes them a good developer
-- General look and usability
+### [Project Board](https://github.com/dsitarek/Personal-Bio-Site/projects/1)
 
-### Contact
-- Is it easy to find the contact information
-- Do all of the links work
-- General look and usability
+## Technical Flowchart
+![BioFlowchart](https://user-images.githubusercontent.com/82732748/143179733-2792a6bc-be62-40da-b183-3270dcfcae6b.png)
 
-### Technologies
-- Is it easy to find where the technologies are
-- Do all the technologies have real content/not fake data
-- Do you actually have experience with the technology (can you explain what it does and why you used it)
-- General look and usability
+## ERD
+![BioERD](https://user-images.githubusercontent.com/82732748/143179723-4cc440ce-5908-4679-a3c4-a3de5a6fa9b9.png)
 
-### Projects
-- Is it easy to find where the projects are
-- Do all the projects have real content/not fake data
-- Do all of the links work
-- Do all of the deployed projects work correctly
-- General look and usability
-- General look and feel of the whole site
-- Is it visually appealing
-- Is it cohesive
+## Contributors
+- [Daniel Sitarek](https://github.com/dsitarek)
