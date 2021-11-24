@@ -12,7 +12,7 @@ export default function ProjectCard({ repo }) {
 
   return (
     <div className="project-card">
-      <a href={projectData.gitHubURL} className="project-link"><span className="project-github-icon">{repo.title}<i className="fab fa-github" /></span></a>
+      <a href={projectData.gitHubURL} target="_blank" className="project-link" rel="noreferrer"><span className="project-github-icon">{repo.title}<i className="fab fa-github" /></span></a>
       <img src={repo.imageURL} alt={repo.name} />
       <p>{repo.description}</p>
       <ul className="project-lang-list">
