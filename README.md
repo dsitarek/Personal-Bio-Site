@@ -20,9 +20,9 @@ This is my personal website/portfolio to display my projects, bio, techstack, an
 ![BioERD](https://user-images.githubusercontent.com/82732748/143179723-4cc440ce-5908-4679-a3c4-a3de5a6fa9b9.png)
 
 
-<a href="https://www.loom.com/share/4f243b512109475bb8477cb2009337a9">
-    <p>Loom Video</p>
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/4f243b512109475bb8477cb2009337a9-with-play.gif">
+## Loom
+<a href="https://www.loom.com/share/967cc9f8c5384b74a5734cee5354b6b6">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/967cc9f8c5384b74a5734cee5354b6b6-with-play.gif">
   </a>
 
 ## Contributors
