@@ -15,7 +15,6 @@ import dsLogo from '../assets/ds-logo.png';
 const AppNavbar = ({ isAdmin }) => {
   const [isOpen, setIsOpen] = useState(false);
   const isHome = (useLocation().pathname === '/');
-  console.log(useLocation());
 
   const toggle = () => setIsOpen(!isOpen);
 
