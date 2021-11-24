@@ -19,5 +19,11 @@ This is my personal website/portfolio to display my projects, bio, techstack, an
 ## ERD
 ![BioERD](https://user-images.githubusercontent.com/82732748/143179723-4cc440ce-5908-4679-a3c4-a3de5a6fa9b9.png)
 
+
+<a href="https://www.loom.com/share/4f243b512109475bb8477cb2009337a9">
+    <p>Loom Video</p>
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/4f243b512109475bb8477cb2009337a9-with-play.gif">
+  </a>
+
 ## Contributors
 - [Daniel Sitarek](https://github.com/dsitarek)
