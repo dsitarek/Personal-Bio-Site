@@ -5,10 +5,10 @@ export default function ContactCard({ contactData }) {
   return (
     <div className="contact-container">
 
-      <a href={contactData.github} target="_blank" rel="noreferrer"><span className="contact-icon"><i className="fab fa-github"> </i></span></a><br />
-      <a href={contactData.linkedIn} target="_blank" rel="noreferrer"><span className="contact-icon"><i className="fab fa-linkedin"> </i></span></a><br />
-      <span className="contact-icon"><i className="fas fa-envelope" /> {contactData.email}</span><br />
-      <span className="contact-icon"><i className="fas fa-phone" /> {contactData.phone}</span><br />
+      <a href={contactData.github} target="_blank" rel="noreferrer"><span className="contact-icon contact-icon-link"><i className="fab fa-github"> </i></span></a><br />
+      <a href={contactData.linkedIn} target="_blank" rel="noreferrer"><span className="contact-icon contact-icon-link"><i className="fab fa-linkedin"> </i></span></a><br />
+      <span className="contact-icon-container"><span className="contact-icon contact-page-icon"><i className="fas fa-envelope" /> <br />{contactData.email}</span></span><br />
+      <span className="contact-icon-container"><span className="contact-icon contact-page-icon"><i className="fas fa-phone" /> <br />{contactData.phone}</span></span>
 
     </div>
   );

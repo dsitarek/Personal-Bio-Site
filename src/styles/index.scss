@@ -9,9 +9,14 @@ body {
 .navbar {
   background-color: black;
   font-family: 'Bauer';
-  padding: 0;
+  padding: 0 1em 0 1em;
   font-size: 1.5em;
   font-family: "ShipporiAntique" !important;
+}
+
+.nav-toggle {
+  color: white !important;
+  background-color: #cfb062 !important;
 }
 
 .navlink {
@@ -20,7 +25,7 @@ body {
 }
 
 .navlink:hover {
-  color: rgb(158, 119, 20) !important;
+  color: rgb(155, 138, 94) !important;
 }
 
 .nav-item {
@@ -32,6 +37,31 @@ body {
   margin: -.2em;
 }
 
+.nav1 {
+  animation: slide .5s 1;
+}
+
+.nav2 {
+  animation: slide 1s 1;
+}
+
+.nav3 {
+  animation: slide 1.5s 1;
+}
+
+.nav4 {
+  animation: slide 2s 1;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-20em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .about-container {
   display: flex;
   justify-content: center;
@@ -40,29 +70,47 @@ body {
 
 .bio-container {
   display: flex;
+  flex-wrap: wrap;
   width: 70%;
   height: 25em;
-  overflow: hidden;
   margin-top: 8em;
   color: rgb(68, 68, 68);
+  align-items: center;
 }
 
 .bio-image img {
   border: 1px transparent;
-  border-radius: 12px;
-  object-fit: contain;
+  border-radius: 2px;
   margin-right: 1em;
   max-height: 100%;
+}
+
+.bio-image {
+  display: flex;
+  justify-content: center;
+  animation: expand 2s 1;
 }
 
 .bio-body {
   word-wrap: break-word;
   margin: 1em;
   text-overflow: inherit;
+  flex-grow: 1;
+  flex-basis: 50%;
 }
 
 .bio-body p {
   font-size: 1.2em;
+  animation: fade 2.5s 1;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }
 
 .bio-body h3 {
@@ -70,6 +118,18 @@ body {
   background-color: black;
   text-align: center;
   width: 10em;
+  animation: expand 2s 1;
+}
+
+@keyframes expand {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(100%);
+    opacity: 100;
+  }
 }
 
 .contact-container {
@@ -77,11 +137,42 @@ body {
   align-items: center;
   flex-direction: column;
   margin-top: 5em;
+  font-size: 200%;
 }
 
 .contact-icon {
   font-size: 3em;
   color: #cfb062;
+}
+
+.contact-icon-link:hover {
+  color: rgb(155, 138, 94) !important;
+}
+
+.contact-icon-container {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end);
+}
+
+.contact-page-icon {
+  width: 100%;
+  text-align: center;
+  letter-spacing: .15em;
+  border-right: .15em solid orange;
+  animation: blink 1s step-end infinite;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #cfb062; }
 }
 
 .tech-container {
@@ -98,6 +189,7 @@ body {
   text-align: center;
   color: #cfb062;
   text-shadow: 0 0 2px rgb(160, 151, 151);
+  animation: fade 2s 1;
 }
 
 .tech-image {
@@ -173,8 +265,10 @@ body {
 
 .projects-container {
   display: flex;
-  align-items: center;
+  justify-content: center;
   padding: 1em;
+  margin-top: 2em;
+  flex-wrap: wrap;
 }
 
 .project-card {
@@ -182,14 +276,26 @@ body {
   flex-direction: column;
   border: 1px transparent;
   border-radius: 6px;
-  background-image: linear-gradient(#cfb06252, rgba(0, 0, 0, 0.329));
+  background-image: linear-gradient(#cfb06252, #d1c29c, #cfb06252);
   height: 33em;
-  flex-basis: 22%;
-  margin: .5em;
+  flex-basis: 23%;
+  margin: 1em;
   padding: .5em 1em .5em 1em;
   align-items: center;
   justify-content: space-evenly;
   word-wrap: break-word;
+  min-width: 18em;
+  max-width: 20em;
+  animation: turn 2s 1;
+}
+
+@keyframes turn {
+  0% {
+    background-position: 0 30em;
+   }
+   100% {
+    background-position: 0 0;
+    }
 }
 
 .project-card p {
@@ -203,5 +309,106 @@ body {
 }
 
 .footer {
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  color: #cfb062;
+  width:100%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9em;
+  height: 3em;
+  line-height: 3em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.auth-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding:0;
+  opacity: 0;
+  line-height: 1.5em;
+}
+
+.contact-icon, .footer-icon {
+  font-size: 1.2em;
+}
+
+@media only screen and (max-width: 1650px) {
+ 
+  .bio-body p {
+    text-align: center;
+  }
+
+  .bio-body {
+    flex-direction: column;
+    align-items: center;
+    flex-basis: none;
+    padding: 0;
+    margin: 1em 0 0 0;
+  }
+
+  .bio-body h3 {
+    text-align: center;
+    width: 100%;
+    flex-grow: 1;
+    margin: auto;
+  }
+
+  .bio-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .contact-container {
+    margin-top: 3em;
+    font-size: 250%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .navbar {
+    font-size: .9em;
+  }
+
+  .bio-image img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact-container {
+    font-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  
+  .project-card {
+    flex-basis: 100%;
+    min-width: 80%;
+  }
+
+  .contact-container {
+    font-size: 100%;
+  }
+
+  .admin-page-container div {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 766px) {
+
+  @keyframes slide {
+    0% {
+      transform: translateX(-20em);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
 }
