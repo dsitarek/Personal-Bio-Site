@@ -8,7 +8,7 @@ export default function Bio({ aboutData }) {
         <img src={aboutData.imageURL} alt={aboutData.name} />
       </div>
       <div className="bio-body">
-        <h3>{aboutData.name}</h3>
+        <div className="bio-name"><h3>&lt; {aboutData.name} /&gt;<span className="blink" /></h3></div>
         <p>{aboutData.bio}</p>
       </div>
     </div>

@@ -88,7 +88,7 @@ body {
 .bio-image {
   display: flex;
   justify-content: center;
-  animation: expand 2s 1;
+  animation: fade 4s 1;
 }
 
 .bio-body {
@@ -101,7 +101,7 @@ body {
 
 .bio-body p {
   font-size: 1.2em;
-  animation: fade 2.5s 1;
+  animation: fade 4s 1;
 }
 
 @keyframes fade {
@@ -115,10 +115,18 @@ body {
 
 .bio-body h3 {
   color: #cfb062;
-  background-color: black;
-  text-align: center;
-  width: 10em;
-  animation: expand 2s 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.61);
+  animation: typing 1.7s steps(17, end),
+  blink 1s step-end infinite;
+  letter-spacing: .37em;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid #cfb062;
+  width: 100%;
+}
+
+.bio-name {
+  width: 27.9em;
 }
 
 @keyframes expand {
@@ -154,13 +162,14 @@ body {
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3s steps(40, end);
+  margin-left: .15em;
 }
 
 .contact-page-icon {
   width: 100%;
   text-align: center;
   letter-spacing: .15em;
-  border-right: .15em solid orange;
+  border-right: .15em solid #cfb062;
   animation: blink 1s step-end infinite;
   overflow: hidden;
 }
@@ -189,7 +198,7 @@ body {
   text-align: center;
   color: #cfb062;
   text-shadow: 0 0 2px rgb(160, 151, 151);
-  animation: fade 2s 1;
+  animation: fade 3s 1;
 }
 
 .tech-image {
@@ -276,7 +285,7 @@ body {
   flex-direction: column;
   border: 1px transparent;
   border-radius: 6px;
-  background-image: linear-gradient(#cfb06252, #d1c29c, #cfb06252);
+  background-image: linear-gradient(90deg,#cfb06252, #d1c29c, #cfb06252);
   height: 33em;
   flex-basis: 23%;
   margin: 1em;
@@ -284,17 +293,21 @@ body {
   align-items: center;
   justify-content: space-evenly;
   word-wrap: break-word;
-  min-width: 18em;
-  max-width: 20em;
-  animation: turn 2s 1;
+  min-width: 22em;
+  max-width: 22em;
+  animation: turn 8s infinite;
+  animation-timing-function: linear;
 }
 
 @keyframes turn {
   0% {
-    background-position: 0 30em;
+    background-position: 22em, 0;
+   }
+  50% {
+    background-position: 0, 0;
    }
    100% {
-    background-position: 0 0;
+    background-position: -22em, 0;
     }
 }
 
@@ -344,34 +357,45 @@ body {
 
   .bio-body {
     flex-direction: column;
+    display: flex;
     align-items: center;
     flex-basis: none;
     padding: 0;
     margin: 1em 0 0 0;
+    width: 100%;
   }
 
   .bio-body h3 {
-    text-align: center;
+    align-items: center;
     width: 100%;
-    flex-grow: 1;
-    margin: auto;
+    font-size: 1.2em;
+    letter-spacing: .17em;
+    animation: typing 1.5s steps(19, end),
+      blink 1s step-end infinite,
+      fade 1.5s 1;
   }
 
   .bio-container {
     flex-direction: column;
     flex-wrap: nowrap;
+    margin-top: 4em;
   }
 
   .contact-container {
     margin-top: 3em;
     font-size: 250%;
   }
+
+  .bio-name {
+    width: 15em;
+    font-size: 1.8em;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
 
   .navbar {
-    font-size: .9em;
+    font-size: 1em;
   }
 
   .bio-image img {
@@ -398,6 +422,38 @@ body {
   .admin-page-container div {
     width: 90%;
   }
+
+  .bio-image {
+    animation: fade 2.5s 1;
+  }
+
+  .bio-name {
+    font-size: 1.5em;
+  }
+
+  .bio-body p {
+    padding-bottom: 2em;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+
+  .bio-name {
+    font-size: 1.2em;
+  }
+
+  .bio-container {
+    margin-top: 2.5em;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  .bio-name {
+    font-size: 1em;
+  }
+
 }
 
 @media only screen and (max-width: 766px) {
