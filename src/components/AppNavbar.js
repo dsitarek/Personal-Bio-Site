@@ -29,7 +29,7 @@ const AppNavbar = ({ isAdmin }) => {
               <NavLink href="/" className={isHome ? 'navlink nav1' : 'navlink'}>Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/Projects" className={isHome ? 'navlink nav2' : 'navlink'}>Projects</NavLink>
+              <NavLink href="/projects" className={isHome ? 'navlink nav2' : 'navlink'}>Projects</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/tech" className={isHome ? 'navlink nav3' : 'navlink'}>Technologies</NavLink>
