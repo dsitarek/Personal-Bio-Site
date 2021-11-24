@@ -1,4 +1,4 @@
-## Bio Site
+## Bio Site [![Netlify Status](https://api.netlify.com/api/v1/badges/2c5abbab-b74b-4759-ad0b-6d7c08ea0fd4/deploy-status)](https://app.netlify.com/sites/blissful-franklin-87ad33/deploys)
 
 [Deployed Site]()
 
