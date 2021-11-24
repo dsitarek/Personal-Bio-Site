@@ -7,16 +7,15 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Button,
 } from 'reactstrap';
 import PropTypes from 'prop-types';
-import { useHistory } from 'react-router-dom';
-import { signInUser, signOutUser } from '../api/auth';
+import { useLocation } from 'react-router-dom';
 import dsLogo from '../assets/ds-logo.png';
 
 const AppNavbar = ({ isAdmin }) => {
-  const history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
+  const isHome = (useLocation().pathname === '/');
+  console.log(useLocation());
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -24,28 +23,26 @@ const AppNavbar = ({ isAdmin }) => {
     <div>
       <Navbar light expand="md" className="navbar">
         <NavbarBrand href="/"><img src={dsLogo} className="nav-logo" alt="DS Logo" /></NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+        <NavbarToggler className="nav-toggle" onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="container-fluid" navbar>
             <NavItem>
-              <NavLink href="/" className="navlink">Home</NavLink>
+              <NavLink href="/" className={isHome ? 'navlink nav1' : 'navlink'}>Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/Projects" className="navlink">Projects</NavLink>
+              <NavLink href="/Projects" className={isHome ? 'navlink nav2' : 'navlink'}>Projects</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/tech" className="navlink">Technologies</NavLink>
+              <NavLink href="/tech" className={isHome ? 'navlink nav3' : 'navlink'}>Technologies</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/contact" className="navlink">Contact</NavLink>
+              <NavLink href="/contact" className={isHome ? 'navlink nav4' : 'navlink'}>Contact</NavLink>
             </NavItem>
             {isAdmin ? (
               <NavItem>
                 <NavLink href="/adminTools" className="navlink">Admin Tools</NavLink>
               </NavItem>
             ) : ''}
-            <Button onClick={signInUser}>in</Button>
-            <Button onClick={() => signOutUser().then(history.push('/'))}>out</Button>
           </Nav>
         </Collapse>
       </Navbar>
